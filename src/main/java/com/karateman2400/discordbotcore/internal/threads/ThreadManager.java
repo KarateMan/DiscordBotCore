@@ -8,17 +8,8 @@ public class ThreadManager {
 
     }
 
-    public int threadCount() {
-        return Thread.activeCount();
-    }
-
-    public void endAllProcesses(String reason, boolean force) {
+    public void endAllProcesses(String reason) {
         System.out.println("[BotCore] A fatal error has occurred with reason: " + reason);
-        System.out.println("[BotCore] Terminating Processes...");
-        if(force) System.exit(0);
-        endAll = true;
-        System.out.println(threadCount());
-        while(threadCount() != 1) continue;
         System.out.println("[BotCore] Bot Terminated");
         System.exit(0);
     }

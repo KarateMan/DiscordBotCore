@@ -11,8 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @CommandClass(module = ExampleModule.class)
-public class ExampleCommand implements Command {
-
+public class NewCommand implements Command {
     @Override
     public boolean execute(MessageReceivedEvent event, String[] args) {
         return false;

@@ -10,6 +10,7 @@ import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
 
 import javax.security.auth.login.LoginException;
+import java.io.IOException;
 
 public class Bot {
 
@@ -19,8 +20,7 @@ public class Bot {
     private static ThreadManager threadManager;
     private static ConfigManager configManager;
 
-    public static void main(String[] args){
-
+    public static void main(String[] args) throws IOException {
         //Initialize Static Classes
         moduleRegistry = new ModuleRegistry();
         commandRegistry = new CommandRegistry();
@@ -28,26 +28,30 @@ public class Bot {
         configManager = new ConfigManager();
 
         //Run Startup Processes
-        if(!moduleRegistry.preInitialization()) threadManager.endAllProcesses("One or more modules failed pre-init", false);
-        if(!moduleRegistry.configInitialization()) threadManager.endAllProcesses("One or more modules failed config-init", false);
-        if(!moduleRegistry.initialization()) threadManager.endAllProcesses("One or more modules failed init", false);
+        if(!configManager.initializeCoreConfig()) threadManager.endAllProcesses("Failed to load core config");
+        if(!moduleRegistry.preInitialization()) threadManager.endAllProcesses("One or more modules failed pre-init");
+        if(!moduleRegistry.configInitialization()) threadManager.endAllProcesses("One or more modules failed config-init");
+        if(!moduleRegistry.initialization()) threadManager.endAllProcesses("One or more modules failed init");
 
         //Register JDA.
         try {
+            if(configManager.getCoreConfig().isDebug()) System.out.println("[BotCore] Registering JDA");
             jda = new JDABuilder(AccountType.BOT)
-                    .setToken("MzM4ODU1NDkzNTU4NTk5Njgw.Xf0IvQ.h00NvYGEJYsC68aDlqARpZb-ZCQ")
+                    .setToken(configManager.getCoreConfig().getToken())
                     .build()
                     .awaitReady();
         } catch (LoginException e) {
-            threadManager.endAllProcesses("JDA registration failed", true);
+            threadManager.endAllProcesses("JDA registration failed");
         } catch (InterruptedException e) {
-            threadManager.endAllProcesses("JDA registration failed", true);
+            threadManager.endAllProcesses("JDA registration failed");
         }
+        if(configManager.getCoreConfig().isDebug()) System.out.println("[BotCore] JDA Registration Success");
+
         jda.getPresence().setActivity(Activity.of(Activity.ActivityType.STREAMING, "Activating Bot"));
 
         //Run Post Startup Processes
-        if(!moduleRegistry.registerCommands()) threadManager.endAllProcesses("One or more modules failed to load commands", false);
-        if(!moduleRegistry.postInitialization()) threadManager.endAllProcesses("One or more modules failed post-init", false);
+        if(!commandRegistry.registerCommands()) threadManager.endAllProcesses("One or more modules failed to load commands");
+        if(!moduleRegistry.postInitialization()) threadManager.endAllProcesses("One or more modules failed post-init");
 
 
         jda.getPresence().setActivity(Activity.of(Activity.ActivityType.STREAMING, "Bot Running"));
