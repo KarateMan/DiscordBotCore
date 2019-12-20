@@ -1,0 +1,39 @@
+plugins {
+    id'com.github.johnrengelman.shadow' version '4.0.4'
+    id 'java'
+}
+
+group 'com.karateman2400'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenCentral()
+    maven { url 'https://jitpack.io/' }
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+}
+
+dependencies {
+    compile ('net.dv8tion:JDA:4.0.0_39')/* {
+        exclude module: 'opus-java'
+    }*/
+    implementation group: 'org.reflections', name: 'reflections', version: '0.9.11'
+    implementation 'com.google.code.gson:gson:2.8.6'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.karateman2400.discordbotcore.Bot'
+        )
+    }
+}
+
+
+compileJava {
+    options.incremental = false
+}
+
+compileJava.options.encoding = 'UTF-8'

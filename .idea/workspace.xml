@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f8e4926b-faa4-4d51-894a-473b0ff1d84a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileContent/fileContent.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/karateman2400/discordbotcore/Bot.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/karateman2400/discordbotcore/internal/commands/Command.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/karateman2400/discordbotcore/internal/commands/CommandClass.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/karateman2400/discordbotcore/internal/commands/CommandHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/karateman2400/discordbotcore/internal/commands/CommandRegistry.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/karateman2400/discordbotcore/internal/configs/ConfigManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/karateman2400/discordbotcore/internal/modules/Module.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/karateman2400/discordbotcore/internal/modules/ModuleClass.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/karateman2400/discordbotcore/internal/modules/ModuleRegistry.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/karateman2400/discordbotcore/internal/threads/ThreadManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/karateman2400/discordbotcore/modules/example/ExampleModule.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/karateman2400/discordbotcore/modules/example/commands/ExampleCommand.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/karateman2400/discordbotcore/Bot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/karateman2400/discordbotcore/internal/commands/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/karateman2400/discordbotcore/internal/commands/CommandClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/karateman2400/discordbotcore/internal/commands/CommandHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/karateman2400/discordbotcore/internal/commands/CommandRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/karateman2400/discordbotcore/internal/configs/ConfigManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/karateman2400/discordbotcore/internal/modules/Module.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/karateman2400/discordbotcore/internal/modules/ModuleClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/karateman2400/discordbotcore/internal/modules/ModuleRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/karateman2400/discordbotcore/internal/threads/ThreadManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/karateman2400/discordbotcore/modules/example/ExampleModule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/karateman2400/discordbotcore/modules/example/commands/ExampleCommand.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\karat\IdeaProjects\DiscordBotCore\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1VFnK7vRi1JN6jIgBRJinMZL2nF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.karateman2400.discordbotcore.Bot" />
+      <module name="DiscordBotCore.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f8e4926b-faa4-4d51-894a-473b0ff1d84a" name="Default Changelist" comment="" />
+      <created>1576857643035</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576857643035</updated>
+      <workItem from="1576857646590" duration="7327000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Project_Structure" timestamp="1576865025129">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Project_Structure/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1576865025129" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576863014670">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1576863014670" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1576861098485">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1576861098485" />
+    <state x="689" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1576863008138">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1576863008138" />
+    <state x="590" y="208" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1576864647036">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="590" y="208" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1576864647036" />
+    <state x="534" y="114" key="CommitChangelistDialog2" timestamp="1576864864242">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="534" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1576864864242" />
+    <state x="794" y="435" width="356" height="169" key="Github.CreateGistDialog" timestamp="1576864480871">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="435" width="356" height="169" key="Github.CreateGistDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1576864480871" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1576864344189">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1576864344189" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1576864344189">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1576864344189" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1576864344189">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1576864344189" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1576864344189">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1576864344189" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1576864952740">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1576864952740" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1576861367980">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1576861367980" />
+  </component>
+</project>
