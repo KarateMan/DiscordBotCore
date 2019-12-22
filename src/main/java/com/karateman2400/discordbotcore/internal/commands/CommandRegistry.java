@@ -14,10 +14,12 @@ public class CommandRegistry {
 
     private List<Command> commands;
     private HashMap<List<String>, Command> commandsAliases;
+    private String botName;
 
     public CommandRegistry() {
         commands = new ArrayList<>();
         commandsAliases = new HashMap<>();
+        botName = Bot.getConfigManager().getCoreConfig().getName();
 
         for(Module module : Bot.getModuleRegistry().getModules()) {
             String commandModulePath = module.getClass().getName().replaceAll(module.getClass().getSimpleName(), "commands");
@@ -36,9 +38,9 @@ public class CommandRegistry {
     }
 
     public boolean registerCommands() {
-        if(Bot.getConfigManager().getCoreConfig().isDebug()) System.out.println("[BotCore] Registering Commands");
+        if(Bot.getConfigManager().getCoreConfig().isDebug()) System.out.println("[" + botName + "] Registering Commands");
         for(Command command : commands) {
-            if(Bot.getConfigManager().getCoreConfig().isDebug()) System.out.println("[BotCore] " + command.getClass().getAnnotation(CommandClass.class).module().getSimpleName() +": " + command.getClass().getSimpleName());
+            if(Bot.getConfigManager().getCoreConfig().isDebug()) System.out.println("[" + botName + "] " + command.getClass().getAnnotation(CommandClass.class).module().getSimpleName() +": " + command.getClass().getSimpleName());
             boolean duplicate = false;
             for(List<String> list : commandsAliases.keySet()) {
                 for(String alias : command.aliases()) {
@@ -46,13 +48,13 @@ public class CommandRegistry {
                 }
             }
             if(duplicate) {
-                if(Bot.getConfigManager().getCoreConfig().isDebug()) System.out.println("[BotCore] Skipping Command: " + command.getClass().getSimpleName() + " with reason alias found in another command.");
+                if(Bot.getConfigManager().getCoreConfig().isDebug()) System.out.println("[" + botName + "] Skipping Command: " + command.getClass().getSimpleName() + " with reason alias found in another command.");
                 duplicate = false;
                 continue;
             }
             commandsAliases.put(command.aliases(), command);
         }
-        if(Bot.getConfigManager().getCoreConfig().isDebug()) System.out.println("[BotCore] Command Registration Success");
+        if(Bot.getConfigManager().getCoreConfig().isDebug()) System.out.println("[" + botName + "] Command Registration Success");
         return true;
     }
 

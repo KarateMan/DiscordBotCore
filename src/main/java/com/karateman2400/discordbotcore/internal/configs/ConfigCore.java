@@ -6,6 +6,7 @@ public class ConfigCore {
     private String name;
     private boolean threaded;
     private boolean debug;
+    private String prefix;
 
     public ConfigCore() {}
 
@@ -39,5 +40,13 @@ public class ConfigCore {
 
     public void setDebug(boolean debug) {
         this.debug = debug;
+    }
+
+    public void setPrefix(String prefix) {
+        this.prefix = prefix;
+    }
+
+    public String getPrefix() {
+        return prefix;
     }
 }

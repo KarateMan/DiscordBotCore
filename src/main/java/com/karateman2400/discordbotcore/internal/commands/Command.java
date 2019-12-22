@@ -3,6 +3,7 @@ package com.karateman2400.discordbotcore.internal.commands;
 import net.dv8tion.jda.api.entities.GuildChannel;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
 import java.util.List;
 
@@ -17,7 +18,7 @@ public interface Command {
      * @param args Command arguments
      * @return Success or Failure
      */
-    boolean execute(MessageReceivedEvent event, String[] args);
+    boolean execute(String label, List<String> args, GuildMessageReceivedEvent event);
 
     /**
      * Checks for command permission.
@@ -37,11 +38,5 @@ public interface Command {
      * @return Command aliases
      */
     List<String> aliases();
-
-    /**
-     * Retrieves all command arguments
-     * @return Command arguments
-     */
-    List<String> getArguments();
 
 }

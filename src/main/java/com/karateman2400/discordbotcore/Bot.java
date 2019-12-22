@@ -1,5 +1,6 @@
 package com.karateman2400.discordbotcore;
 
+import com.karateman2400.discordbotcore.internal.commands.CommandHandler;
 import com.karateman2400.discordbotcore.internal.commands.CommandRegistry;
 import com.karateman2400.discordbotcore.internal.configs.ConfigManager;
 import com.karateman2400.discordbotcore.internal.modules.ModuleRegistry;
@@ -21,21 +22,22 @@ public class Bot {
     private static ConfigManager configManager;
 
     public static void main(String[] args) throws IOException {
+
         //Initialize Static Classes
+        configManager = new ConfigManager();
+        if(!configManager.initializeCoreConfig()) threadManager.endAllProcesses("Failed to load core config"); // Must run before ModuleRegistry is loaded
         moduleRegistry = new ModuleRegistry();
         commandRegistry = new CommandRegistry();
         threadManager = new ThreadManager();
-        configManager = new ConfigManager();
 
         //Run Startup Processes
-        if(!configManager.initializeCoreConfig()) threadManager.endAllProcesses("Failed to load core config");
         if(!moduleRegistry.preInitialization()) threadManager.endAllProcesses("One or more modules failed pre-init");
         if(!moduleRegistry.configInitialization()) threadManager.endAllProcesses("One or more modules failed config-init");
         if(!moduleRegistry.initialization()) threadManager.endAllProcesses("One or more modules failed init");
 
         //Register JDA.
         try {
-            if(configManager.getCoreConfig().isDebug()) System.out.println("[BotCore] Registering JDA");
+            if(configManager.getCoreConfig().isDebug()) System.out.println("[" + configManager.getCoreConfig().getName() + "] Registering JDA");
             jda = new JDABuilder(AccountType.BOT)
                     .setToken(configManager.getCoreConfig().getToken())
                     .build()
@@ -45,16 +47,18 @@ public class Bot {
         } catch (InterruptedException e) {
             threadManager.endAllProcesses("JDA registration failed");
         }
-        if(configManager.getCoreConfig().isDebug()) System.out.println("[BotCore] JDA Registration Success");
+        if(configManager.getCoreConfig().isDebug()) System.out.println("[" + configManager.getCoreConfig().getName() + "] JDA Registration Success");
 
         jda.getPresence().setActivity(Activity.of(Activity.ActivityType.STREAMING, "Activating Bot"));
 
         //Run Post Startup Processes
         if(!commandRegistry.registerCommands()) threadManager.endAllProcesses("One or more modules failed to load commands");
         if(!moduleRegistry.postInitialization()) threadManager.endAllProcesses("One or more modules failed post-init");
+        jda.addEventListener(new CommandHandler());
 
 
         jda.getPresence().setActivity(Activity.of(Activity.ActivityType.STREAMING, "Bot Running"));
+        jda.getSelfUser().getManager().setName(configManager.getCoreConfig().getName()).queue();
     }
 
     public static JDA getJda() {

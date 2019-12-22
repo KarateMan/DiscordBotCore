@@ -35,6 +35,7 @@ public class ConfigManager {
             coreConfig.setToken("Need Token");
             coreConfig.setThreaded(true);
             coreConfig.setDebug(true);
+            coreConfig.setPrefix("!");
             FileWriter writer = new FileWriter(file);
             writer.write(gson.toJson(coreConfig));
             writer.close();
